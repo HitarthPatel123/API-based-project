@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main flex">
+        <div class="searchbox flex">
+            <input type="text" name="location" id="location" placeholder="Enter location">
+            <button class="fa-solid fa-magnifying-glass" id="searchBtn" area-hidd area-hidden="true"></button>
+        </div>
+        <div class="desc flex">
+            <img src="./assets/cloud.png" width="170px" id="weather-img">
+            <div class="temp">
+                20<sup>o</sup>C
+            </div>
+            <div class="nature">
+                Scattered Clouds
+            </div>
+            <div class="details flex">
+                <div class="humidity flex ">
+                    <div class="fa-solid fa-droplet icon"></div>
+                    <div class="one flex">
+                        <div class="perc">
+                            75%
+                        </div>
+                        <div class="title">
+                            Humidity
+                        </div>
+                    </div>
+                </div>
+                <div class="windspeed flex">
+                    <div class="fa-solid fa-wind icon"></div>
+                    <div class="one flex">
+                        <div class="speed">
+                            3.09Km/H
+                        </div>
+                        <div class="title">
+                            Wind Speed
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/463b9ee457.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
