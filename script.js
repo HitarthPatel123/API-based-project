@@ -20,20 +20,21 @@ async function fetchWeather(city){
     perc.innerHTML=`${weather_data.main.humidity}%`;
 
     switch(weather_data.weather[0].description){
-        case 'Clouds':
+        case 'overcast clouds':
             weather_img.src="./assets/cloud.png"; 
             break;
-        case 'Clear':
+        case 'clear':
             weather_img.src="./assets/clear.png";
             break;
-        case 'Rain':
+        case 'rain':
             weather_img.src="./assets/rain.png";
             break;
-        case 'Snow':
+        case 'snow':
             weather_img.src="./assets/snow.png";
             break;
-        case 'Mist':
+        case 'haze':
             weather_img.src="./assets/mist.png";
+            break;
     }
 
 
