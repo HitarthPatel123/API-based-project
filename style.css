@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: black;
+    background-color: rgb(68, 66, 66);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,6 +78,7 @@ body{
 .nature {
     font-size: 20px;
     font-weight: 500;
+    text-transform: capitalize;
 }
 
 .details {

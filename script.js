@@ -13,20 +13,36 @@ async function fetchWeather(city){
     const weather_data=await fetch(`${url}`).then(response=>
         response.json());
     
+    if(weather_data.message=="city not found"){
+        temp.style.display="none";
+        nature.style.marginTop="23px";
+        nature.innerHTML=`Sorry!! location not found`;
+        weather_img.src="./assets/404.png";
+        weather_img.style.marginTop="10px";
+    }
+
+    else{
     // console.log(weather_data);
     temp.innerHTML=`${Math.round(weather_data.main.temp-273.15)}<sup>o</sup>C`;
     nature.innerHTML=`${weather_data.weather[0].description}`;
     speed.innerHTML=`${weather_data.wind.speed}Km/H`;
     perc.innerHTML=`${weather_data.main.humidity}%`;
+    weather_img.src="./assets/cloud.png"
 
     switch(weather_data.weather[0].description){
+        case 'mist':
+            weather_img.src="./assets/mist.png";
+            break;
+        case 'clouds':
+            weather_img.src="./assets/cloud.png"; 
+            break;
         case 'overcast clouds':
             weather_img.src="./assets/cloud.png"; 
             break;
-        case 'clear':
+        case'clear':
             weather_img.src="./assets/clear.png";
             break;
-        case 'rain':
+        case 'light rain':
             weather_img.src="./assets/rain.png";
             break;
         case 'snow':
@@ -35,8 +51,9 @@ async function fetchWeather(city){
         case 'haze':
             weather_img.src="./assets/mist.png";
             break;
+        
     }
-
+}
 
 }
 searchBtn.addEventListener('click',()=>{
