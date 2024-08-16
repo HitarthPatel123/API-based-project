@@ -8,6 +8,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    scale:2;
+    overflow: hidden;
 }
 .main{
     position: relative;
