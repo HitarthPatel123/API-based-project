@@ -13,7 +13,7 @@ body{
 }
 .main{
     position: relative;
-    top:100px;
+    top:200px;
 }
 .flex {
     display: flex;
